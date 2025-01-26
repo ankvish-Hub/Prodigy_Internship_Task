@@ -1,3 +1,12 @@
 # Prodigy_Internship_Task
+
+
 This repository contains tasks given by Prodigy Infotech during my internship.
-stop-watch-web-app.netlify.app
+
+
+
+
+
+TASK 1 : Stop Watch Web App
+TASK 2 : Weather Web App
+
