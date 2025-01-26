@@ -3,7 +3,7 @@ let isRunning = false;
 let seconds = 0;
 let minutes = 0;
 let hours = 0;
-let lapCount = 0; // Counter for lap numbers
+let lapCount = 0; 
 
 function updateDisplay() {
     document.getElementById("seconds").textContent = seconds < 10 ? `0${seconds}` : seconds;
@@ -39,32 +39,32 @@ function resetTimer() {
     seconds = 0;
     minutes = 0;
     hours = 0;
-    lapCount = 0; // Reset lap counter
+    lapCount = 0; 
     updateDisplay();
     clearLapRecords();
 }
 
 function addLap() {
     if (isRunning) {
-        lapCount++; // Increment lap counter
+        lapCount++; 
         const lapTime = `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
         const lapList = document.getElementById("lap-list");
         const lapItem = document.createElement("li");
-        lapItem.textContent = `Lap ${lapCount}: ${lapTime}`; // Add lap number
+        lapItem.textContent = `Lap ${lapCount}: ${lapTime}`; 
         lapList.appendChild(lapItem);
 
-        // Make the Lap Records heading visible
+       
         document.getElementById("lap-heading").style.display = "block";
     }
 }
 
 function clearLapRecords() {
     const lapList = document.getElementById("lap-list");
-    lapList.innerHTML = ""; // Clear all lap records
-    document.getElementById("lap-heading").style.display = "none"; // Hide the heading again
+    lapList.innerHTML = ""; 
+    document.getElementById("lap-heading").style.display = "none"; 
 }
 
-// Event listeners
+
 document.getElementById("start").addEventListener("click", startTimer);
 document.getElementById("stop").addEventListener("click", stopTimer);
 document.getElementById("reset").addEventListener("click", resetTimer);
